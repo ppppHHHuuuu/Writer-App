@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/36.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="manage-doc">
+            <div class="doc-name">
+                <input form="text" id="name" placeholder="Untitled Doc" ></span>
+            </div>
+            <div class="file-manip">
+                <button id="file-btn" type="button" >File</button>
+                <div class="file-dropdown">
+                    
+                    <div  class="store-file">
+                        <i class="fa fa-file" ></i>
+                        <button id="store-file" class="manage-file">Store File</button>
+                    </div>
+
+                    <div class="file-info"onclick="getFileSize()">
+                        <i class="fa fa-info-circle"></i>
+                        <span id="info" class="manage-file" onclick="openPopup()" >Information</span>
+
+                        <div class="popup" id="popup" onmouseleave="closePopup()">
+                            <h3 id="info">File Information: </h3>
+                            <span>Date Created: </span>
+                            <span id="date-created">30/03/2023</span>
+                            <br>
+                            <span >File Size:</span>
+                            <span id="file-size"></span>
+                            <br>
+                            <span>Last Modified: </span>
+                            <span id="last-modified"></span> 
+                            <br>
+                            <!-- <button >close </button> -->
+                        </div>
+                    </div>
+                    
+                    <div class="insert">
+                        <i class="fa fa-plus"></i>
+                        <span  id="insert" class="manage-file"> Insert</span>
+                        <div class="insert-type">
+                            <div class="image">
+                                <i class="fa fa-image"></i>
+                                <span id="image">Image</span>
+                            </div>
+                            <div class="link">
+                                <i class="fa fa-link"></i>
+                                <span id="link">Link</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                    <div class="download">
+                        <i class="fa fa-download"></i>
+                        <button id="download" class="manage-file" >Download</button>
+                        
+                    </div>
+                    
+                </div>
+                <!-- <div class="recently-opened">
+                    <button>Recently Opened</button>
+                </div> -->
+            </div>
+            
+            
+        </div>
+
+        <div id="editor"></div>
+    </div>
+
+
+
+
+    <script src="popup.js">fdsa</script>
+    <script src="manage_file.js"></script>
+    <script src="classiceditor.js"></script>
+    <script src="change_header_name.js"></script>
+</body>
+</html>
